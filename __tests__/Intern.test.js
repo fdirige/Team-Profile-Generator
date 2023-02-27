@@ -2,17 +2,17 @@ const Intern = require("../lib/Intern");
 
 describe("Intern", () => {
     const mockIntern = {
-        name: "Freya",
+        name: "Blake",
         id: 102,
-        email: "freya@gmail.com",
+        email: "blake@gmail.com",
         school: "UC Davis",
     };
     describe("constructor tests", () => {
         test("Constructs a new instance of the intern class", () => {
-            const intern = new Engineer(mockIntern);
+            const intern = new Intern(mockIntern);
             expect(intern).toBeInstanceOf(Intern);
         });
-        test("Constrcuts a new instance of an engineer class with name, id, email, and school", () => {
+        test("Constrcuts a new instance of an intern class with name, id, email, and school", () => {
             const intern = new Intern(mockIntern);
             expect(intern).toEqual({
                 name: "Blake",
@@ -44,7 +44,7 @@ describe("Intern", () => {
             expect(intern.getSchool()).toEqual("UC Davis");
         });
 
-        test("Return engineer role when calling the getRole method", () => {
+        test("Return intern role when calling the getRole method", () => {
             const intern = new Intern(mockIntern);
             expect(intern.getRole()).toEqual("Intern");
         });

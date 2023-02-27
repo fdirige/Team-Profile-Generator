@@ -21,9 +21,9 @@ test("Constructs a new instance of an employee class with name, id, email",() =>
 });
 });
 describe("method tests", () => {
-    test("Returns an id when calling the getID method",() => {
+    test("Returns an id when calling the getID method", () => {
         const employee = new Employee(mockEmployee);
-        expect(employee.getID()).toEqual(100);
+        expect(employee.getId()).toEqual(100);
     });
 
     test("Returns name when calling the getName method", () => {

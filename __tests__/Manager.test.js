@@ -19,6 +19,7 @@ describe("Manager", () => {
                 id: 103,
                 email: "erick@gmail.com",
                 officeNumber: 888,
+                role: "Manager",
             });
         });
     });
