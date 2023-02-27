@@ -49,7 +49,7 @@ const init = async() => {
 
 // Employees array to genereate team.html
 const HTML = generateHTML(employees);
-fs.writeFileSync("team.html", HTML, (err) => {
+fs.writeFileSync("index.html", HTML, (err) => {
     if (err) {
         console.log(err);
     } else {
