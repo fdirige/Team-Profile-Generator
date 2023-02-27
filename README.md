@@ -6,6 +6,8 @@ This is a team profile generator via node.js command-line application. Users wil
 
 The technologies I used are HTML, Javascript, and bootstrap for styling. The challenges I faced were building the multiple html and js pages associated to each of the employees and connecting them all together for the genereated team.html. I also ran into test failures and determined that I had a few typos in my test js files. 
 
+https://fdirige.github.io/Team-Profile-Generator/
+
 ## Screen shot
 
 ![Screen shot of Team Profile Generator](./src/Capture3.JPG)
