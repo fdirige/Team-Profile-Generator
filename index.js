@@ -1,15 +1,15 @@
 const inquirer = require("inquirer");
 const fs = require ("fs");
-const generateHTML = require("./src/generateHTML");
-const Manager = require("./lib/Manager");
-const Engineer = require("./lib/Engineer");
-const Intern = require("./lib/Intern");
+const generateHTML = require("./src/generateHTML.js");
+const Manager = require("./lib/Manager.js");
+const Engineer = require("./lib/Engineer.js");
+const Intern = require("./lib/Intern.js");
 const employees = [];
 let isTeamComplete = false;
 
 //Validates the user's input before proceeding to the next question
 const validateInput = (userInput) => {
-    if (userInput === "") {
+    if (userInput === ""){
         return "A value is required before proceeding";
     } else {
         return true;
@@ -17,9 +17,9 @@ const validateInput = (userInput) => {
 };
 
 //Initilizes function
-const init = async () => {
+const init = async() => {
     await createManager();
-    while (!isTeamComplete) {
+    while (!isTeamComplete){
         const employeeTypeQuestion = [
             {
                 type: "list",
@@ -33,7 +33,7 @@ const init = async () => {
             },
         ];
         //Generate employee type object
-        const {employeeType} = await inquirer.createPromptModule(employeeTypeQuestion);
+        const {employeeType} = await inquirer.prompt(employeeTypeQuestion);
 
         if (employeeType === "none") {
             isTeamComplete = true;
@@ -59,7 +59,7 @@ fs.writeFileSync("team.html", HTML, (err) => {
 };
 
 //Creates manager function
-const createManager = async () => {
+const createManager = async() => {
     const managerQuestions = [
         {
             type: "input",
@@ -93,7 +93,7 @@ const createManager = async () => {
 };
 
 //Creates engineer function
-const createEngineer = async () => {
+const createEngineer = async() => {
     const engineerQuestions = [
         {
             type: "input",
@@ -127,7 +127,7 @@ const createEngineer = async () => {
 };
 
 //Creates intern function
-const createIntern = async () => {
+const createIntern = async() => {
     const internQuestions = [
         {
             type: "input",

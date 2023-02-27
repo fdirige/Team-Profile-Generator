@@ -2,8 +2,7 @@ const fs = require("fs");
 
 const path = require("path");
 const Employee = require("../lib/Employee");
-
-const templatesDir = path.resolve(__dirname,"../templates");
+const templatesDir = path.resolve(__dirname, "../templates");
 
 const generateHTML = (employees) => {
     const HTML = [];
@@ -31,7 +30,7 @@ return renderFullMarkdown(HTML.join(""));
 
 const renderManager = (manager) => {
     let template = fs.readFileSync(
-        path.resolve(templateDir, "manager.html"),
+        path.resolve(templatesDir, "manager.html"),
         "utf8"
     );
 
@@ -50,7 +49,7 @@ const renderManager = (manager) => {
 
 const renderEngineer = (engineer) => {
     let template = fs.readFileSync(
-    path.resolve(templateDir, "engineer.html"),
+    path.resolve(templatesDir, "engineer.html"),
     "utf8"
     );
 
@@ -65,7 +64,7 @@ const renderEngineer = (engineer) => {
 
 const renderIntern = (intern) => {
     let template = fs.readFileSync(
-    path.resolve(templateDir, "intern.html"),
+    path.resolve(templatesDir, "intern.html"),
     "utf8"
     );
 
